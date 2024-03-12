@@ -1,0 +1,54 @@
+:root {
+  --colors-interface-white: #fff;
+  --colors-interface-black: #212226;
+  --colors-interface-gray-light: #f7f6f9;
+  --colors-interface-gray: #929ead;
+  --colors-interface-gray-dark: #606c78;
+  --colors-interface-blue: #4154a4;
+  --colors-interface-yellow: #fdbd02;
+  --colors-interface-orange: #eb8f2d;
+  --colors-interface-red: #c53637;
+  --colors-interface-green: #3ea745;
+  --colors-interface-border: #e2e4e8;
+
+  --colors-button-primary-default: var(--colors-interface-blue);
+  --colors-button-primary-hover: #4154a4cc;
+  --colors-button-primary-active: #344383;
+
+  --colors-button-secondary-default: #eceef6;
+  --colors-button-secondary-hover: #4154a433;
+  --colors-button-secondary-active: #4154a459;
+
+  --colors-button-negative-default: var(--colors-button-secondary-default);
+  --colors-button-negative-hover: #c536371a;
+  --colors-button-negative-active: #c5363740;
+  --colors-button-disabled: var(--colors-interface-gray-light);
+
+  --colors-table-border: #e5e5e5;
+
+  --background: var(--colors-interface-gray-light);
+
+  --text-color-primary: var(--colors-interface-black);
+  --text-color-secondary: var(--colors-interface-gray);
+
+  --transition-common: all 100ms ease-out;
+  --transition-hover: opacity 100ms ease-out;
+  --transition-background-color: background-color 100ms ease-out;
+  --hover-opacity: 0.75;
+  --common-border-radius: 10px;
+  --common-border-width: 1px;
+  --common-border-style: solid;
+  --common-element-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 10px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background: #f7f6f9;
+  margin: 0 auto;
+  max-width: 1440px;
+}
