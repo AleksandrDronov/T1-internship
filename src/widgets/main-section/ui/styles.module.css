@@ -1,0 +1,45 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 170px 0px 96px;
+}
+
+.container {
+  position: relative;
+  padding-top: 20px;
+}
+
+.graph {
+  position: absolute;
+  bottom: -25px;
+  left: -77px;
+  background-color: var(--colors-interface-white);
+  box-shadow: 16px -16px 24px 0px rgba(70, 70, 70, 0.2);
+  padding: 12px 0;
+  border-radius: 16px;
+}
+
+.arrow {
+  position: absolute;
+  top: 73px;
+  right: -56px;
+  z-index: -1;
+}
+
+.lines_upper {
+  position: absolute;
+  top: -73px;
+  right: -120px;
+}
+
+.lines_lower {
+  position: absolute;
+  bottom: -62px;
+  left: -112px;
+}
+
+.card {
+  position: absolute;
+  top: -40px;
+  right: -82px;
+}

@@ -1,45 +1,31 @@
 :root {
-  --colors-interface-white: #fff;
-  --colors-interface-black: #212226;
-  --colors-interface-gray-light: #f7f6f9;
-  --colors-interface-gray: #929ead;
-  --colors-interface-gray-dark: #606c78;
-  --colors-interface-blue: #4154a4;
-  --colors-interface-yellow: #fdbd02;
-  --colors-interface-orange: #eb8f2d;
-  --colors-interface-red: #c53637;
-  --colors-interface-green: #3ea745;
-  --colors-interface-border: #e2e4e8;
+  --colors-interface-white-bg: #f9f9f9;
+  --colors-interface-white: #ffffff;
+  --colors-interface-black: #201f1f;
+  --colors-interface-violet: #6c5fbc;
+  --colors-interface-violet-light: #c5bfed;
+  --colors-interface-gray: #676767;
+  --colors-interface-gray-dark: #606060;
+  --colors-interface-gray-medium: #8e97a6;
+  --colors-interface-gray-light: #c3c2c2;
+  --colors-interface-yellow-light: #f7edd0;
+  --colors-interface-yellow: #daa31a;
+  --colors-interface-red: #fb471d;
+  --colors-interface-bg-footer: #eaeaea;
+  --colors-interface-border: #cbcbcb;
 
-  --colors-button-primary-default: var(--colors-interface-blue);
-  --colors-button-primary-hover: #4154a4cc;
-  --colors-button-primary-active: #344383;
-
-  --colors-button-secondary-default: #eceef6;
-  --colors-button-secondary-hover: #4154a433;
-  --colors-button-secondary-active: #4154a459;
-
-  --colors-button-negative-default: var(--colors-button-secondary-default);
-  --colors-button-negative-hover: #c536371a;
-  --colors-button-negative-active: #c5363740;
-  --colors-button-disabled: var(--colors-interface-gray-light);
-
-  --colors-table-border: #e5e5e5;
-
-  --background: var(--colors-interface-gray-light);
-
-  --text-color-primary: var(--colors-interface-black);
-  --text-color-secondary: var(--colors-interface-gray);
-
-  --transition-common: all 100ms ease-out;
   --transition-hover: opacity 100ms ease-out;
-  --transition-background-color: background-color 100ms ease-out;
-  --hover-opacity: 0.75;
-  --common-border-radius: 10px;
-  --common-border-width: 1px;
-  --common-border-style: solid;
-  --common-element-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
-    0 10px 20px -5px rgba(0, 0, 0, 0.4);
+  --transition-card: all 350ms ease-out;
+  --transition-common: all 100ms ease-out;
+  --hover-opacity: 0.8;
+
+  --colors-button-primary-default: var(--colors-interface-violet);
+  --colors-button-primary-hover: var(--colors-interface-white);
+  --colors-button-primary-active: var(--colors-interface-violet);
+
+  --colors-button-secondary-default: var(--colors-interface-white);
+  --colors-button-secondary-hover: var(--colors-interface-violet);
+  --colors-button-secondary-active: var(--colors-interface-white);
 }
 
 body {
@@ -48,7 +34,22 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-  background: #f7f6f9;
+  background: var(--colors-interface-white-bg);
   margin: 0 auto;
   max-width: 1440px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--colors-interface-violet);
+}
+
+::-webkit-scrollbar-track {
+  background: #c3c0d7;
+  border-radius: 50px;
 }

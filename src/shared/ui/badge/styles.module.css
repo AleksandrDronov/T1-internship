@@ -1,0 +1,9 @@
+.badge {
+  padding: 3px 6px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.primary {
+  background-color: var(--colors-interface-yellow-light);
+}

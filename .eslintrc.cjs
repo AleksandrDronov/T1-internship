@@ -20,7 +20,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.ts"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.ts", "public"],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
   parserOptions: {
@@ -39,5 +39,9 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "import/no-unresolved": "off",
+    "import/no-absolute-path": "off",
+    "react/button-has-type": "off",
   },
 };
