@@ -1,0 +1,18 @@
+.container {
+  width: 528px;
+  padding: 40px 42px 47px 42px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background-color: var(--colors-interface-white);
+  box-shadow: -16px 16px 24px 0px rgba(70, 70, 70, 0.2)
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icon {
+  padding-bottom: 8px;
+}

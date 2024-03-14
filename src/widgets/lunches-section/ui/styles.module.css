@@ -1,0 +1,29 @@
+.section {
+  padding-top: 104px;
+  padding-bottom: 228px;
+  margin: 0 85px 0 96px;
+  border-top: 1px solid var(--colors-interface-border);
+  border-bottom: 1px solid var(--colors-interface-border);
+}
+
+.highlight {
+  color: var(--colors-interface-violet);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding-top: 87px;
+  padding-left: 0;
+}
+
+.card {
+  transition: var(--transition-card);
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+

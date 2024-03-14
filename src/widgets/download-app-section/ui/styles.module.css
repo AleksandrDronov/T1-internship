@@ -1,0 +1,5 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin: 106px 106px 116px 208px;
+}

@@ -1,0 +1,17 @@
+.section {
+  background-color: var(--colors-interface-violet);
+  margin-top: 140px;
+  position: relative;
+}
+
+.line_one {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.line_two {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

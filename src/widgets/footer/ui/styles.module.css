@@ -1,0 +1,31 @@
+.footer {
+  padding: 96px 87px 81px 96px;
+  background-color: var(--colors-interface-bg-footer);
+}
+
+.container_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--colors-interface-gray-light);
+}
+
+.container_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 56px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  gap: 54px;
+  padding: 0;
+  margin: 0;
+}
+
+.socials li {
+  cursor: pointer;
+}
