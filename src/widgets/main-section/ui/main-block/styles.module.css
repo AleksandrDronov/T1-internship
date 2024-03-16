@@ -35,3 +35,10 @@
   display: flex;
   gap: 20px;
 }
+
+@media screen and (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

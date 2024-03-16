@@ -1,6 +1,7 @@
 import { Logo } from "@/shared/ui/logo";
 import { Navigation } from "@/features/navigation";
 import { Typography } from "@/shared/ui/typography";
+import { CustomLink } from "@/shared/ui/link";
 import instagramIcon from "/instagram.svg";
 import linkedinIcon from "/linkedin.svg";
 import facebookIcon from "/fb.svg";
@@ -20,16 +21,24 @@ export function Footer() {
         </Typography>
         <ul className={styles.socials}>
           <li>
-            <img src={instagramIcon} alt="Instagram" />
+            <CustomLink to="#" hasOpacity={false}>
+              <img src={instagramIcon} alt="Instagram" />
+            </CustomLink>
           </li>
           <li>
-            <img src={linkedinIcon} alt="LinkedIn" />
+            <CustomLink to="#" hasOpacity={false}>
+              <img src={linkedinIcon} alt="LinkedIn" />
+            </CustomLink>
           </li>
           <li>
-            <img src={facebookIcon} alt="Facebook" />
+            <CustomLink to="#" hasOpacity={false}>
+              <img src={facebookIcon} alt="Facebook" />
+            </CustomLink>
           </li>
           <li>
-            <img src={twitterIcon} alt="Twitter" />
+            <CustomLink to="#" hasOpacity={false}>
+              <img src={twitterIcon} alt="Twitter" />
+            </CustomLink>
           </li>
         </ul>
       </div>

@@ -12,3 +12,9 @@
 .footer {
   gap: 70px;
 }
+
+@media screen and (max-width: 480px) {
+  .footer {
+    gap: 52px
+  }
+}
