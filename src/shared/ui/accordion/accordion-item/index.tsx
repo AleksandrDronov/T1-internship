@@ -21,7 +21,7 @@ export function AccordionItem({ item, isOpen, onClick }: AccordionItemProps) {
         className={styles.accordion_button}
         variant="tertiary"
         onClick={onClick}
-        aria-label={isOpen ? "Close accordion section" : "Open accordion section"}
+        aria-label={isOpen ? "Open accordion section" : "Close accordion section"}
         aria-expanded={isOpen}
       >
         <div className={styles.accordion_header}>
