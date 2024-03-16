@@ -15,6 +15,7 @@ export function CardOrder({ className, shadow, order }: CardOrderProps) {
       className={clsx(className, styles.container, {
         [styles.shadow]: shadow,
       })}
+      aria-label="Order card"
     >
       <div className={styles.content}>
         <img src={order.image} alt={order.title} />

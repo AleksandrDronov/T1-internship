@@ -16,7 +16,7 @@ export function CardReview({
   review,
 }: CardReviewProps) {
   return (
-    <div className={clsx(className, styles.container)}>
+    <div className={clsx(className, styles.container)} aria-label="Review card">
       <div className={styles.header}>
         <Typography variant="b10-web">{review.username}</Typography>
         {hasIcon && <img className={styles.icon} src={icon} alt="" />}

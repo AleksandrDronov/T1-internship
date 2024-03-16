@@ -14,7 +14,7 @@ interface CardProductProps {
 
 export function CardProduct({ className, product }: CardProductProps) {
   return (
-    <div className={clsx(className, styles.container)}>
+    <div className={clsx(className, styles.container)} aria-label="Product card">
       <img src={product.image} alt={product.title} />
       <Button className={styles.bookmark} variant="tertiary" aria-label="Add to bookmarks">
         <img src={bookmarkImage} alt="" />
