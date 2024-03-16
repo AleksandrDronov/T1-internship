@@ -6,7 +6,11 @@ import styles from "./styles.module.css";
 export function DownloadAppSection() {
   return (
     <section className={styles.section}>
-      <img src={mobileImage} alt="Mobile phone with our app" />
+      <img
+        className={styles.image}
+        src={mobileImage}
+        alt="Mobile phone with our app"
+      />
       <DownloadBlock />
     </section>
   );

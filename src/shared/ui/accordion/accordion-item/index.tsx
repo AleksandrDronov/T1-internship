@@ -21,13 +21,15 @@ export function AccordionItem({ item, isOpen, onClick }: AccordionItemProps) {
         className={styles.accordion_button}
         variant="tertiary"
         onClick={onClick}
+        aria-label={isOpen ? "Close accordion section" : "Open accordion section"}
+        aria-expanded={isOpen}
       >
         <div className={styles.accordion_header}>
           <Typography variant="b12-web">{item.title}</Typography>
           {isOpen ? (
-            <img src={minus} alt="plus" />
+            <img src={minus} alt="" />
           ) : (
-            <img src={plus} alt="plus" />
+            <img src={plus} alt="" />
           )}
         </div>
         <Typography

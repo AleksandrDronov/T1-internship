@@ -1,17 +1,57 @@
 .section {
   margin: 0 144px 164px 167px;
-  padding-top: 22px;
+  padding-top: 26px;
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 80px;
+  }
 }
 
 .container {
   position: relative;
-  max-width: 408px;
+  width: 408px;
   margin: 0 auto;
   padding-right: 24px;
 }
 
+@media screen and (max-width: 1060px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
+
 .title {
-  line-height: 54px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 1060px) {
+  .title {
+    text-align: left;
+  }
 }
 
 .highlight {
@@ -24,7 +64,25 @@
   right: -41px;
 }
 
+@media screen and (max-width: 1060px) {
+  .image {
+    width: 9%;
+    right: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    display: none;
+  }
+}
+
 .accordion {
   margin-top: 94px;
-  margin-bottom: 164px;
+}
+
+@media screen and (max-width: 480px) {
+  .accordion {
+    margin-top: 60px;
+  }
 }

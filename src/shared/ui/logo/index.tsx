@@ -9,12 +9,18 @@ interface LogoProps {
 }
 
 export function Logo({ variant = "header" }: LogoProps) {
-  const logo = useMemo(() => (variant === "header" ? logoHeader : logoFooter), [variant]);
+  const logo = useMemo(
+    () => (variant === "header" ? logoHeader : logoFooter),
+    [variant],
+  );
 
   return (
     <div className={styles.logo}>
-      <img src={logo} alt="logotype" />
-      <Typography variant={variant === "header" ? "logo-header" : "logo-footer"} color="violet">
+      <img src={logo} alt="Logo" />
+      <Typography
+        variant={variant === "header" ? "logo-header" : "logo-footer"}
+        color="violet"
+      >
         eatly
       </Typography>
     </div>

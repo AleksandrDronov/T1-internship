@@ -15,12 +15,19 @@ export function MainSection() {
     <section className={styles.section}>
       <MainBlock />
       <div className={styles.container}>
-        <img src={foodImage} alt="Plate with vegetables and fish" />
-        <img className={styles.graph} src={graphImage} alt="" />
+        <img
+          className={styles.plate}
+          src={foodImage}
+          loading="lazy"
+          alt="Plate with vegetables and fish"
+        />
+        <img className={styles.graph} loading="lazy" src={graphImage} alt="" />
         <img className={styles.arrow} src={arrowImage} alt="" />
-        <img className={styles.lines_upper} src={linesImage1} alt="" />
         <img className={styles.lines_lower} src={linesImage2} alt="" />
-        <CardOrder className={styles.card} order={order} shadow />
+        <div className={styles.card_container}>
+          <CardOrder order={order} shadow />
+          <img className={styles.lines_upper} src={linesImage1} alt="" />
+        </div>
       </div>
     </section>
   );

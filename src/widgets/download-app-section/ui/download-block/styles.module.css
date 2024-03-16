@@ -3,6 +3,12 @@
   padding-top: 91px;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    padding-top: 60px;
+  }
+}
+
 .highlight {
   color: var(--colors-interface-violet);
 }
@@ -14,13 +20,31 @@
   margin: 68px 0 66px;
 }
 
+@media screen and (max-width: 480px) {
+  .list {
+    margin: 40px 0;
+  }
+}
+
 .item {
   margin-bottom: 26px;
 }
 
-.button {
-  height: fit-content;
+.button_container {
   position: relative;
+  width: fit-content;
+}
+
+@media screen and (max-width: 480px) {
+  .button_container {
+    width: 100%;
+  }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .button_content {
@@ -41,4 +65,12 @@
   position: absolute;
   bottom: -50px;
   right: -141px;
+}
+
+@media screen and (max-width: 480px) {
+  .arrow {
+    width: 45%;
+    top: 130%;
+    right: 0;
+  }
 }
