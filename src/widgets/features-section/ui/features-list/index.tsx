@@ -9,9 +9,7 @@ export function FeaturesList() {
           10K+
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
-          Satisfied Costumers
-          {" "}
-          All Great Over The World
+          Satisfied Costumers All&nbsp;Great&nbsp;Over The World
         </Typography>
       </li>
       <li className={styles.item}>
@@ -19,9 +17,7 @@ export function FeaturesList() {
           4M
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
-          Healthy Dishes Sold
-          {" "}
-          Including Milk Shakes Smooth
+          Healthy Dishes Sold Including&nbsp;Milk Shakes Smooth
         </Typography>
       </li>
       <li className={styles.item}>
@@ -29,9 +25,7 @@ export function FeaturesList() {
           99.99%
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
-          Reliable Customer Support
-          {" "}
-          We Provide Great Experiences
+          Reliable Customer Support We&nbsp;Provide Great Experiences
         </Typography>
       </li>
     </ul>
