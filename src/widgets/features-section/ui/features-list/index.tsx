@@ -5,7 +5,7 @@ export function FeaturesList() {
   return (
     <ul className={styles.list}>
       <li className={styles.item}>
-        <Typography className={styles.title} variant="h3-web" tag="h3" color="white" align="center">
+        <Typography className={styles.title} variant="h3-web" tag="h2" color="white" align="center">
           10K+
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
@@ -13,7 +13,7 @@ export function FeaturesList() {
         </Typography>
       </li>
       <li className={styles.item}>
-        <Typography className={styles.title} variant="h3-web" tag="h3" color="white" align="center">
+        <Typography className={styles.title} variant="h3-web" tag="h2" color="white" align="center">
           4M
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
@@ -21,7 +21,7 @@ export function FeaturesList() {
         </Typography>
       </li>
       <li className={styles.item}>
-        <Typography className={styles.title} variant="h3-web" tag="h3" color="white" align="center">
+        <Typography className={styles.title} variant="h3-web" tag="h2" color="white" align="center">
           99.99%
         </Typography>
         <Typography variant="b5-web" color="violet-light" align="center">
