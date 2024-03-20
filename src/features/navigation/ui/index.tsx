@@ -17,14 +17,14 @@ export function Navigation({ variant = "header" }: NavigationProps) {
         })}
       >
         <li>
-          <CustomLink to="/recipes">
+          <CustomLink anchor to="recipes">
             <Typography variant="b1-web" color="gray-dark" tag="span">
               Recipes
             </Typography>
           </CustomLink>
         </li>
         <li>
-          <CustomLink to="/faq">
+          <CustomLink anchor to="faq">
             <Typography variant="b1-web" color="gray-dark" tag="span">
               FAQ
             </Typography>

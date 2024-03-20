@@ -32,7 +32,7 @@ const items = [
 
 export function FAQSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="faq">
       <div className={styles.container}>
         <Typography
           className={styles.title}

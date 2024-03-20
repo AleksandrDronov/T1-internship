@@ -16,14 +16,23 @@
   color: var(--colors-interface-white);
 }
 
-.primary:hover {
-  background-color: var(--colors-button-primary-hover);
-  color: var(--colors-interface-violet);
+@media (hover: hover) {
+  .primary:hover {
+    background-color: var(--colors-button-primary-hover);
+    color: var(--colors-interface-violet);
+  }
+
+  .primary:active {
+    background-color: var(--colors-button-primary-active);
+    color: var(--colors-interface-white);
+  }
 }
 
-.primary:active {
-  background-color: var(--colors-button-primary-active);
-  color: var(--colors-interface-white);
+@media (hover: none) {
+  .primary:active {
+    background-color: var(--colors-button-primary-hover);
+    color: var(--colors-interface-violet);
+  }
 }
 
 .secondary {
@@ -32,15 +41,25 @@
   color: var(--colors-interface-violet);
 }
 
-.secondary:hover {
-  background-color: var(--colors-button-secondary-hover);
-  color: var(--colors-interface-white);
+@media (hover: hover) {
+  .secondary:hover {
+    background-color: var(--colors-button-secondary-hover);
+    color: var(--colors-interface-white);
+  }
+  
+  .secondary:active {
+    background-color: var(--colors-button-secondary-active);
+    color: var(--colors-interface-violet);
+  }
 }
 
-.secondary:active {
-  background-color: var(--colors-button-secondary-active);
-  color: var(--colors-interface-violet);
+@media (hover: none) {
+  .secondary:active {
+    background-color: var(--colors-button-secondary-hover);
+    color: var(--colors-interface-white);
+  }
 }
+
 
 .tertiary {
   padding: 0;

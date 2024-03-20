@@ -1,8 +1,12 @@
-export interface Product {
+export interface Recipe {
   id: number;
+  name: string;
   image: string;
-  title: string;
-  productType: string;
-  deliveryTime: string;
-  raiting: number;
+  cuisine: string;
+  cookTimeMinutes: number;
+  rating: number;
+}
+
+export interface Products {
+  recipes: Recipe[];
 }

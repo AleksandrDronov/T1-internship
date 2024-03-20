@@ -1,21 +1,21 @@
 import { Typography } from "@/shared/ui/typography";
-import { LunchesList } from "./lunches-list";
+import { CommentsList } from "./comments-list";
 import styles from "./styles.module.css";
 
-export function LunchesSection() {
+export function CommentsSection() {
   return (
-    <section className={styles.section} id="recipes">
+    <section className={styles.section}>
       <Typography
         className={styles.title}
         variant="h4-web"
         tag="h2"
         align="center"
       >
-        Our Top
+        <span className={styles.highlight}>Customer</span>
         {" "}
-        <span className={styles.highlight}>Lunch</span>
+        Say
       </Typography>
-      <LunchesList />
+      <CommentsList />
     </section>
   );
 }
