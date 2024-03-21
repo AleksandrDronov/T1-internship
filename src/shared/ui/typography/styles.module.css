@@ -143,7 +143,19 @@
   line-height: 25px;
 }
 
+.b15-web {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
 
+.b16-web {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
 
 
 .h1-web {

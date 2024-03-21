@@ -12,11 +12,14 @@ export function Button({
   className,
   type = "button",
   variant = "primary",
+  disabled = false,
   ...props
 }: ButtonProps) {
   return (
     <button
-      className={clsx(styles.button, className, styles[variant])}
+      className={clsx(styles.button, className, styles[variant], {
+        [styles.disabled]: disabled,
+      })}
       type={type}
       {...props}
     >

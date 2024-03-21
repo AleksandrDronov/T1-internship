@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 
@@ -24,7 +23,9 @@ interface TypographyProps {
     | "b11-web"
     | "b12-web"
     | "b13-web"
-    | "b14-web";
+    | "b14-web"
+    | "b15-web"
+    | "b16-web";
   color?:
     | "black"
     | "white"
@@ -37,7 +38,7 @@ interface TypographyProps {
     | "yellow"
     | "red";
   align?: "left" | "center" | "right";
-  tag?: "h1" | "h2" | "h3" | "h4" | "span" | "p";
+  tag?: "h1" | "h2" | "h3" | "h4" | "span" | "p" | "div";
   noWrap?: boolean;
   dots?: boolean;
   children: string | number | React.ReactNode;
@@ -49,14 +50,12 @@ export function Typography({
   variant = "h1-web",
   color = "black",
   align = "left",
-  tag = "p",
+  tag: Tag = "p",
   noWrap = false,
   dots = false,
   children,
   inlineStyles,
 }: TypographyProps) {
-  const Tag = useMemo(() => tag, [tag]);
-
   return (
     <Tag
       style={inlineStyles}
