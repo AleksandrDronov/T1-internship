@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { CardProduct, useGetProductsQuery } from "@/entities/product";
 import { Typography } from "@/shared/ui/typography";
 import styles from "./styles.module.css";
@@ -8,6 +9,10 @@ export function LunchesList() {
     isLoading,
     isError,
   } = useGetProductsQuery();
+
+  const topProducts = useMemo(() => [...products.recipes]
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 3), [products]);
 
   if (isLoading) {
     return (
@@ -23,10 +28,6 @@ export function LunchesList() {
       </Typography>
     );
   }
-
-  const topProducts = [...products.recipes]
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 3);
 
   return (
     <ul className={styles.list}>

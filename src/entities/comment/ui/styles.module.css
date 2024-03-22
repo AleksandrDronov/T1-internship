@@ -1,17 +1,10 @@
 .container {
   width: 100%;
-  max-width: 528px;
   padding: 40px 42px 47px 42px;
   box-sizing: border-box;
   border-radius: 22px;
   background-color: var(--colors-interface-white);
   box-shadow: -16px 16px 24px 0px rgba(70, 70, 70, 0.2)
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 528px;
-  }
 }
 
 @media screen and (max-width: 480px) {

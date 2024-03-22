@@ -9,7 +9,13 @@ const commentsApi = apiClient.injectEndpoints({
         method: "GET",
       }),
     }),
+    getCommentsForArticle: build.query<Comments, string | undefined>({
+      query: (id) => ({
+        url: `comments/post/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetCommentsQuery } = commentsApi;
+export const { useGetCommentsQuery, useGetCommentsForArticleQuery } = commentsApi;

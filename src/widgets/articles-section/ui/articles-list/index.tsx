@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CardArticle, useLazyGetArticlesQuery } from "@/entities/article";
+import { CardArticle, useGetArticlesQuery } from "@/entities/article";
 import { Typography } from "@/shared/ui/typography";
 import { Button } from "@/shared/ui/button";
 import arrow from "./back.svg";
 import styles from "./styles.module.css";
 
 export function ArticlesList() {
-  const [getArticles,
-    {
-      data = { posts: [], total: 0 },
-      isLoading,
-      isError,
-    }] = useLazyGetArticlesQuery();
   const [skipCount, setSkipCount] = useState(0);
-
-  useEffect(() => {
-    getArticles({ skip: skipCount });
-  }, [getArticles, skipCount]);
+  const { data = { posts: [], total: 0 }, isLoading, isError } = useGetArticlesQuery(
+    { skip: skipCount },
+  );
 
   const onNexPageClick = () => {
     if (skipCount + data.posts.length >= data.total) return;

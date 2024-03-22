@@ -157,6 +157,23 @@
   line-height: 26px;
 }
 
+.b17-web {
+  composes: b16-web;
+  font-size: 16px;
+}
+
+.b18-web {
+  composes: b10-web;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.b19-web {
+  composes: b16-web;
+  font-size: 22px;
+  line-height: 45px;
+}
+
 
 .h1-web {
   font-family: "Poppins", sans-serif;
@@ -205,6 +222,24 @@
   /* font-size: 45px; */
   /* line-height: 26px; */
   letter-spacing: normal;
+}
+
+.h5-web {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
+  line-height: 1.11;
+  /* font-size: 40px; */
+  /* line-height: 45px; */
+}
+
+.h6-web {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 0.9107rem + 1.0714vw, 1.875rem);
+  line-height: 1.48;
+  /* font-size: 30px; */
+  /* line-height: 45px; */
 }
 
 

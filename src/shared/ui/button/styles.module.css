@@ -3,6 +3,7 @@
   cursor: pointer;
   padding: 18px 30px;
   border-radius: 12px;
+  box-sizing: border-box;
   transition: var(--transition-common);
   font-family: "Poppins", sans-serif;
   font-weight: 500;

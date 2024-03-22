@@ -8,6 +8,8 @@ interface TypographyProps {
     | "h2-web"
     | "h3-web"
     | "h4-web"
+    | "h5-web"
+    | "h6-web"
     | "logo-header"
     | "logo-footer"
     | "b1-web"
@@ -25,7 +27,10 @@ interface TypographyProps {
     | "b13-web"
     | "b14-web"
     | "b15-web"
-    | "b16-web";
+    | "b16-web"
+    | "b17-web"
+    | "b18-web"
+    | "b19-web"
   color?:
     | "black"
     | "white"

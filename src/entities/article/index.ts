@@ -1,3 +1,3 @@
 export { CardArticle } from "./ui";
 export type { Article } from "./model";
-export { useGetArticlesQuery, useLazyGetArticlesQuery } from "./api";
+export { useGetArticleQuery, useGetArticlesQuery } from "./api";

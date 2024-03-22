@@ -1,5 +1,5 @@
 import { apiClient } from "@/shared/api";
-import { Articles } from "../model";
+import { Articles, Article } from "../model";
 
 const articlesApi = apiClient.injectEndpoints({
   endpoints: (build) => ({
@@ -9,7 +9,13 @@ const articlesApi = apiClient.injectEndpoints({
         method: "GET",
       }),
     }),
+    getArticle: build.query<Article, string | undefined>({
+      query: (id) => ({
+        url: `posts/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetArticlesQuery, useLazyGetArticlesQuery } = articlesApi;
+export const { useGetArticlesQuery, useGetArticleQuery } = articlesApi;

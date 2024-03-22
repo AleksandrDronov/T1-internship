@@ -25,7 +25,11 @@ export function CommentsList() {
     <div className={styles.container}>
       <Slider>
         {data.comments.map((comment) => (
-          <CardComment comment={comment} key={comment.id} />
+          <CardComment
+            className={styles.card}
+            comment={comment}
+            key={comment.id}
+          />
         ))}
       </Slider>
     </div>
