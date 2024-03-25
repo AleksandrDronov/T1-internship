@@ -1,0 +1,55 @@
+:root {
+  --colors-interface-white-bg: #f9f9f9;
+  --colors-interface-white: #ffffff;
+  --colors-interface-black: #201f1f;
+  --colors-interface-violet: #6c5fbc;
+  --colors-interface-violet-light: #c5bfed;
+  --colors-interface-gray: #676767;
+  --colors-interface-gray-dark: #606060;
+  --colors-interface-gray-medium: #8e97a6;
+  --colors-interface-gray-light: #c3c2c2;
+  --colors-interface-yellow-light: #f7edd0;
+  --colors-interface-yellow: #daa31a;
+  --colors-interface-red: #fb471d;
+  --colors-interface-bg-footer: #eaeaea;
+  --colors-interface-border: #cbcbcb;
+
+  --transition-hover: opacity 100ms ease-out;
+  --transition-card: all 350ms ease-out;
+  --transition-common: all 100ms ease-out;
+  --hover-opacity: 0.8;
+
+  --colors-button-primary-default: var(--colors-interface-violet);
+  --colors-button-primary-hover: var(--colors-interface-white);
+  --colors-button-primary-active: var(--colors-interface-violet);
+
+  --colors-button-secondary-default: var(--colors-interface-white);
+  --colors-button-secondary-hover: var(--colors-interface-violet);
+  --colors-button-secondary-active: var(--colors-interface-white);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background: var(--colors-interface-white-bg);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--colors-interface-violet);
+}
+
+::-webkit-scrollbar-track {
+  background: #c3c0d7;
+  border-radius: 50px;
+}

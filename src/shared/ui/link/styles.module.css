@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-hover);
+}
+
+.link_hover:hover {
+  opacity: var(--hover-opacity);
+}

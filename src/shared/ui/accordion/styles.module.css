@@ -1,0 +1,13 @@
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion li:not(:first-child) {
+  border-top: 1px solid var(--colors-interface-gray-light);
+}
+
+.accordion li:last-child {
+  border-bottom: 1px solid var(--colors-interface-gray-light);
+}

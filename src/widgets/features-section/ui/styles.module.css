@@ -1,0 +1,35 @@
+.section {
+  background-color: var(--colors-interface-violet);
+  margin-top: 143px;
+  position: relative;
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    margin-top: 120px;
+  }
+}
+
+.line_one {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .line_one {
+    display: none;
+  }
+}
+
+.line_two {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .line_two {
+    display: none;
+  }
+}

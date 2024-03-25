@@ -1,0 +1,53 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin: 106px 106px 116px 208px;
+}
+
+.image {
+  width: 33.4%;
+}
+
+@media screen and (max-width: 1060px) {
+  .image {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    flex-direction: column-reverse;
+    gap: 120px;
+    align-items: center;
+    margin-left: 96px;
+    margin-right: 96px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+  }
+}
