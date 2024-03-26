@@ -9,6 +9,7 @@ interface CardUserProps {
   image: string | undefined;
   isLoading?: boolean;
   isError?: boolean;
+  variant?: "primary" | "secondary";
 }
 
 export function CardUser({
@@ -18,29 +19,41 @@ export function CardUser({
   image,
   isLoading,
   isError,
+  variant = "primary",
 }: CardUserProps) {
   if (isLoading) {
     return (
-      <Typography variant="b18-web">Loading...</Typography>
+      <Typography className={styles.title} variant="b18-web">
+        Loading...
+      </Typography>
     );
   }
 
   if (isError) {
     return (
-      <Typography variant="b18-web">Error</Typography>
+      <Typography className={styles.title} variant="b18-web">
+        Error
+      </Typography>
     );
   }
   return (
     <div
-      className={clsx(className, styles.container)}
+      className={clsx(className, styles[`container-${variant}`])}
       aria-label="User card"
     >
-      <img className={styles.image} src={image} alt={`Avatar of ${firstName} ${lastName}`} />
+      <img
+        className={styles[`image-${variant}`]}
+        src={image}
+        alt={`Avatar of ${firstName} ${lastName}`}
+      />
       <div>
-        <Typography variant="b17-web" color="gray-medium">
+        <Typography
+          variant={variant === "primary" ? "b17-web" : "b20-web"}
+          color="gray-medium"
+        >
           Written By
         </Typography>
-        <Typography variant="b18-web">
+        <Typography variant={variant === "primary" ? "b18-web" : "b21-web"}>
           {firstName}
           {" "}
           {lastName}

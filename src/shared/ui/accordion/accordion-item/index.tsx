@@ -16,15 +16,15 @@ export function AccordionItem({ item, isOpen, onClick }: AccordionItemProps) {
   const itemRef = useRef<HTMLSpanElement>(null);
 
   return (
-    <li className={styles.accordion_item}>
+    <li className={styles.item}>
       <Button
-        className={styles.accordion_button}
+        className={styles.button}
         variant="tertiary"
         onClick={onClick}
         aria-label={isOpen ? "Open accordion section" : "Close accordion section"}
         aria-expanded={isOpen}
       >
-        <div className={styles.accordion_header}>
+        <div className={styles.header}>
           <Typography variant="b12-web">{item.title}</Typography>
           {isOpen ? (
             <img src={minus} alt="" />
@@ -33,15 +33,15 @@ export function AccordionItem({ item, isOpen, onClick }: AccordionItemProps) {
           )}
         </div>
         <Typography
-          className={clsx(styles.accordion_content, {
-            [styles.accordion_open]: isOpen,
+          className={clsx(styles.content, {
+            [styles.open]: isOpen,
           })}
           inlineStyles={{
             height: isOpen ? itemRef.current?.scrollHeight : 0,
           }}
           variant="b13-web"
         >
-          <span className={styles.accordion_body} ref={itemRef}>
+          <span className={styles.body} ref={itemRef}>
             {item.content}
           </span>
         </Typography>

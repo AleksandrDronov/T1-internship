@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import LinesEllipsis from "react-lines-ellipsis";
+import { Article } from "@/entities/article";
+import { CardUser, useGetUserQuery } from "@/entities/user";
 import { Typography } from "@/shared/ui/typography";
-import { Article } from "../model";
 import icon from "./star.svg";
 import styles from "./styles.module.css";
 
@@ -11,6 +12,12 @@ interface CardArticleProps {
 }
 
 export function CardArticle({ className, article }: CardArticleProps) {
+  const {
+    data: userData,
+    isLoading,
+    isError,
+  } = useGetUserQuery(article.userId);
+
   return (
     <div
       className={clsx(className, styles.container)}
@@ -20,16 +27,24 @@ export function CardArticle({ className, article }: CardArticleProps) {
         {article.title}
       </Typography>
       <div className={styles.header}>
-        <Typography variant="b8-web" color="gray-medium">
-          {article.tags.map((tag) => `#${tag}`).join(", ")}
-        </Typography>
-        <div className={styles.icon_container}>
+        <CardUser
+          variant="secondary"
+          firstName={userData?.firstName}
+          lastName={userData?.lastName}
+          image={userData?.image}
+          isLoading={isLoading}
+          isError={isError}
+        />
+        <div className={styles.icon}>
           <Typography variant="b9-web" color="gray-medium">
             {article.reactions}
           </Typography>
           <img src={icon} alt="" />
         </div>
       </div>
+      <Typography className={styles.tags} variant="b8-web" color="gray-medium">
+        {article.tags.map((tag) => `#${tag}`).join(", ")}
+      </Typography>
       <LinesEllipsis
         text={article.body}
         className={styles.body}

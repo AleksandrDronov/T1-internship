@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CardArticle, useGetArticlesQuery } from "@/entities/article";
+import { CardArticle } from "@/features/open-article";
+import { useGetArticlesQuery } from "@/entities/article";
 import { Typography } from "@/shared/ui/typography";
 import { Button } from "@/shared/ui/button";
 import arrow from "./back.svg";
