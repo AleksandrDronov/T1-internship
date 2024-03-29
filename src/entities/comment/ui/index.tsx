@@ -1,6 +1,6 @@
-import { Typography } from "@/shared/ui/typography";
 import clsx from "clsx";
-import { Comment } from "../model";
+import { Typography } from "@/shared/ui/typography";
+import { Comment } from "./types";
 import icon from "./brackets.svg";
 import styles from "./styles.module.css";
 

@@ -1,27 +1,34 @@
 .section {
   display: flex;
   justify-content: space-between;
-  margin: 106px 106px 116px 208px;
+  margin: 106px 106px 112px 208px;
 }
 
-.image {
+.picture {
+  display: flex;
+  align-items: center;
   width: 33.4%;
 }
 
+.image {
+  width: 100%;
+  object-position: bottom left;
+}
+
 @media screen and (max-width: 1060px) {
-  .image {
+  .picture {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .image {
+  .picture {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .image {
+  .picture {
     width: 60%;
   }
 }

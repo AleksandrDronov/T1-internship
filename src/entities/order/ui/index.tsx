@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Typography } from "@/shared/ui/typography";
-import { Order } from "../model";
+import { Order } from "./types";
 import styles from "./styles.module.css";
 
 interface CardOrderProps {

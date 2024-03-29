@@ -27,22 +27,26 @@
   }
 }
 
-.image {
+.picture {
   width: 43%;
-  height: fit-content;
-  border-radius: 24px;
-  margin-top: -6px;
-  box-shadow: -36px 46px 84px 0px rgba(70, 70, 70, 0.2);
 }
 
 @media screen and (max-width: 1060px) {
-  .image {
+  .picture {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .image {
+  .picture {
     width: 90%;
   }
+}
+
+.image {
+  width: 100%;
+  height: fit-content;
+  border-radius: 24px;
+  margin-top: -6px;
+  box-shadow: -36px 46px 84px 0px rgba(70, 70, 70, 0.2);
 }

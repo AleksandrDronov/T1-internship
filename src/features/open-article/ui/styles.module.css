@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  min-height: 278px;
+  min-height: 270px;
   max-width: 350px;
   padding: 26px 20px;
   border-radius: 16px;
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 18px;
   padding-bottom: 10px;
 }
 

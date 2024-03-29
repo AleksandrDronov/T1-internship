@@ -19,11 +19,11 @@ export function CardArticle({ className, article }: CardArticleProps) {
   } = useGetUserQuery(article.userId);
 
   return (
-    <div
+    <article
       className={clsx(className, styles.container)}
       aria-label="Article card"
     >
-      <Typography variant="b15-web" dots noWrap>
+      <Typography variant="b15-web" tag="h2" dots noWrap>
         {article.title}
       </Typography>
       <div className={styles.header}>
@@ -52,6 +52,6 @@ export function CardArticle({ className, article }: CardArticleProps) {
         ellipsis="..."
         basedOn="words"
       />
-    </div>
+    </article>
   );
 }

@@ -7,6 +7,8 @@ import { Button } from "@/shared/ui/button";
 import arrow from "./back.svg";
 import styles from "./styles.module.css";
 
+const MAX_ARTICLES_PER_PAGE = 12;
+
 export function ArticlesList() {
   const [skipCount, setSkipCount] = useState(0);
   const { data = { posts: [], total: 0 }, isLoading, isError } = useGetArticlesQuery(
@@ -14,13 +16,11 @@ export function ArticlesList() {
   );
 
   const onNexPageClick = () => {
-    if (skipCount + data.posts.length >= data.total) return;
-    setSkipCount(skipCount + 12);
+    setSkipCount(skipCount + MAX_ARTICLES_PER_PAGE);
   };
 
   const onPreviousPageClick = () => {
-    if (skipCount <= 0) return;
-    setSkipCount(skipCount - 12);
+    setSkipCount(skipCount - MAX_ARTICLES_PER_PAGE);
   };
 
   if (isLoading) {

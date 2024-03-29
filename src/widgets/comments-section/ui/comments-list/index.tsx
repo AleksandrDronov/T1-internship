@@ -1,6 +1,6 @@
-import { Slider } from "@/shared/ui/slider";
 import { CardComment, useGetCommentsQuery } from "@/entities/comment";
 import { Typography } from "@/shared/ui/typography";
+import { Slider } from "@/shared/ui/slider";
 import styles from "./styles.module.css";
 
 export function CommentsList() {

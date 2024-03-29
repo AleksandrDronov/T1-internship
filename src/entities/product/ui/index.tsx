@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Typography } from "@/shared/ui/typography";
 import { Badge } from "@/shared/ui/badge";
 import { Button } from "@/shared/ui/button";
-import { Recipe } from "../model";
+import { Recipe } from "../api/types";
 import starImage from "./star.svg";
 import bookmarkImage from "./bookmark.svg";
 import styles from "./styles.module.css";

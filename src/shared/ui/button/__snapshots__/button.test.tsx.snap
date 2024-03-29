@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly default 1`] = `
+<button
+  className="button primary"
+  disabled={false}
+  type="button"
+>
+  Submit
+</button>
+`;
+
+exports[`Button renders correctly disabled 1`] = `
+<button
+  className="button primary disabled"
+  disabled={true}
+  type="button"
+>
+  Disabled Button
+</button>
+`;
+
+exports[`Button renders correctly link 1`] = `
+<a
+  className="button primary link"
+  href="/test"
+  onClick={[Function]}
+>
+  Link
+</a>
+`;
+
+exports[`Button renders correctly primary 1`] = `
+<button
+  className="button primary"
+  disabled={false}
+  type="button"
+>
+  Primary Button
+</button>
+`;
+
+exports[`Button renders correctly secondary 1`] = `
+<button
+  className="button secondary"
+  disabled={false}
+  type="button"
+>
+  Secondary Button
+</button>
+`;
+
+exports[`Button renders correctly tertiary 1`] = `
+<button
+  className="button tertiary"
+  disabled={false}
+  type="button"
+>
+  Tertiary Button
+</button>
+`;

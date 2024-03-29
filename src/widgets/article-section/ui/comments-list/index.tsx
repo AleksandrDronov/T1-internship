@@ -3,7 +3,7 @@ import { Typography } from "@/shared/ui/typography";
 import styles from "./styles.module.css";
 
 interface CommentsListProps {
-  comments: Comment[] | undefined;
+  comments: Comment[];
   isLoading?: boolean;
   isError?: boolean;
 }
@@ -30,7 +30,7 @@ export function CommentsList({ comments, isLoading, isError }: CommentsListProps
         Comments
       </Typography>
       <ul className={styles.list}>
-        {comments?.map((comment) => (
+        {comments.map((comment) => (
           <li key={comment.id}>
             <CardComment comment={comment} />
           </li>
