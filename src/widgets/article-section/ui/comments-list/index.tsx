@@ -20,10 +20,19 @@ export function CommentsList({ comments, isLoading, isError }: CommentsListProps
   if (isError) {
     return (
       <Typography variant="h3-web" align="center">
-        An error has occurred!
+        Error! Failed to load comments
       </Typography>
     );
   }
+
+  if (!comments?.length) {
+    return (
+      <Typography variant="h6-web" align="center">
+        No comments yet
+      </Typography>
+    );
+  }
+
   return (
     <div className={styles.container}>
       <Typography variant="h6-web" tag="h2">

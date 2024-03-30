@@ -32,10 +32,19 @@ export function CardUser({
   if (isError) {
     return (
       <Typography className={styles.title} variant="b18-web">
-        Error
+        Error! Failed to load user
       </Typography>
     );
   }
+
+  if (!firstName || !lastName || !image) {
+    return (
+      <Typography className={styles.title} variant="b18-web">
+        User not found
+      </Typography>
+    );
+  }
+
   return (
     <div
       className={clsx(className, styles[`container-${variant}`])}

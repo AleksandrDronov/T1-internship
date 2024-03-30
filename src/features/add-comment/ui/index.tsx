@@ -11,20 +11,25 @@ interface AddCommentProps {
   postId: number;
 }
 
-export function AddComment({
-  postId,
-} : AddCommentProps) {
+export function AddComment({ postId }: AddCommentProps) {
   const [value, setValue] = useState("");
-  const [addComment, { isLoading }] = useAddCommentMutation();
+  const [errorValue, setErrorValue] = useState("");
+  const [addComment, { isLoading, isError }] = useAddCommentMutation();
   const dispatch = useAppDispatch();
 
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
-      const data = await addComment({ body: value, postId, userId: 10 }).unwrap();
+      const data = await addComment({
+        body: value,
+        postId,
+        userId: 10,
+      }).unwrap();
       dispatch(addCommentStore(data));
-    } catch (error) {
-      throw new Error("Server Error");
+    } catch (err) {
+      const error = err as { data: { message: string } };
+      setErrorValue(error.data.message);
+      throw new Error(error.data.message);
     } finally {
       setValue("");
     }
@@ -46,7 +51,16 @@ export function AddComment({
           name="comment"
           id="comment"
         />
-        <Button className={styles.button} type="submit" disabled={!value || isLoading}>
+        {isError && (
+          <Typography variant="b15-web" color="red">
+            {errorValue}
+          </Typography>
+        )}
+        <Button
+          className={styles.button}
+          type="submit"
+          disabled={!value || isLoading}
+        >
           Send
         </Button>
       </form>

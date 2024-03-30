@@ -49,10 +49,18 @@ export function ArticleSection() {
     );
   }
 
-  if (isArticleError || !articleData) {
+  if (isArticleError) {
     return (
       <Typography className={styles.title} variant="h3-web" align="center">
-        An error has occurred!
+        Error! Failed to load article
+      </Typography>
+    );
+  }
+
+  if (!articleData?.id) {
+    return (
+      <Typography className={styles.title} variant="h3-web" align="center">
+        Article not found
       </Typography>
     );
   }
