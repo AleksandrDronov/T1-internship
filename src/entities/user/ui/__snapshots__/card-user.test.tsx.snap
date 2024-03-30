@@ -31,7 +31,7 @@ exports[`CardUser renders correctly with isError 1`] = `
 <p
   className="title text b18-web black left"
 >
-  Error
+  Error! Failed to load user
 </p>
 `;
 
