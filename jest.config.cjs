@@ -1,49 +1,20 @@
 module.exports = {
-  roots: ["<rootDir>/src"],
-  collectCoverageFrom: [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d.ts",
-    "!src/mocks/**",
-  ],
-  coveragePathIgnorePatterns: [],
-  setupFilesAfterEnv: ["./src/app/jest-config/setupTests.js"],
+  // collectCoverage: true,
+  collectCoverageFrom: ["src/**/*.{ts,tsx}"],
+  coverageDirectory: "coverage",
   testEnvironment: "jsdom",
-  modulePaths: ["<rootDir>/src"],
+  setupFilesAfterEnv: ["<rootDir>/src/app/jest-config/setup-tests.ts"],
   transform: {
-    "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest",
-    "^.+\\.css$": "<rootDir>/src/app/jest-config/cssTransform.js",
-    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)":
-      "<rootDir>/src/app/jest-config/fileTransform.js",
+    "^.+\\.(ts|tsx)$": "@swc/jest",
   },
   transformIgnorePatterns: [
     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-    "^.+\\.module\\.(css|sass|scss)$",
+    "^.+\\.module\\.css$",
   ],
-  modulePaths: ["<rootDir>/src"],
   moduleNameMapper: {
-    "^react-native$": "react-native-web",
-    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
-    "^.+\\.(svg)$": "<rootDir>/src/app/jest-config/fileMock.js",
+    "^.+\\.module\\.css$": "identity-obj-proxy",
+    "^.+\\.svg$": "<rootDir>/src/app/jest-config/file-mock.ts",
     "^@/(.*)$": "<rootDir>/src/$1",
   },
-  moduleFileExtensions: [
-    // Place tsx and ts to beginning as suggestion from Jest team
-    // https://jestjs.io/docs/configuration#modulefileextensions-arraystring
-    "tsx",
-    "ts",
-    "css",
-    "web.js",
-    "js",
-    "web.ts",
-    "web.tsx",
-    "json",
-    "web.jsx",
-    "jsx",
-    "node",
-  ],
-  watchPlugins: [
-    "jest-watch-typeahead/filename",
-    "jest-watch-typeahead/testname",
-  ],
-  resetMocks: true,
+  moduleFileExtensions: ["ts", "tsx", "js"],
 };
