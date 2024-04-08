@@ -3,7 +3,7 @@ import { FeaturesSection } from "@/widgets/features-section";
 import { DownloadAppSection } from "@/widgets/download-app-section";
 import { LunchesSection } from "@/widgets/lunches-section";
 import { ControlPurchaseSection } from "@/widgets/control-purchase-section";
-import { ReviewsSection } from "@/widgets/reviews-section";
+import { CommentsSection } from "@/widgets/comments-section";
 import { FAQSection } from "@/widgets/faq-section";
 
 export function HomePage() {
@@ -14,7 +14,7 @@ export function HomePage() {
       <DownloadAppSection />
       <LunchesSection />
       <ControlPurchaseSection />
-      <ReviewsSection />
+      <CommentsSection />
       <FAQSection />
     </main>
   );

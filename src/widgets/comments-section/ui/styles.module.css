@@ -1,0 +1,42 @@
+.section {
+  padding-top: 114px;
+  margin-left: 83px;
+  margin-bottom: 80px;
+  border-top: 1px solid var(--colors-interface-border);
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    margin-left: 96px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 20px;
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.title {
+  padding-right: 81px;
+}
+
+@media screen and (max-width: 1060px) {
+  .title {
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
+
+.highlight {
+  color: var(--colors-interface-violet);
+}

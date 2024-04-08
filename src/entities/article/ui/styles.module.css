@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  max-width: 350px;
+  padding: 26px 20px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: var(--colors-interface-white);
+  box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 350px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 18px;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px; 
+  color: #081420;
+}
