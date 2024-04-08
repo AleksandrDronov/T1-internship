@@ -21,10 +21,19 @@ export function LunchesList() {
       </Typography>
     );
   }
+
   if (isError) {
     return (
       <Typography className={styles.title} variant="h3-web" align="center">
-        An error has occurred!
+        Error! Failed to load products
+      </Typography>
+    );
+  }
+
+  if (!topProducts.length) {
+    return (
+      <Typography className={styles.title} variant="h3-web" align="center">
+        No products found
       </Typography>
     );
   }

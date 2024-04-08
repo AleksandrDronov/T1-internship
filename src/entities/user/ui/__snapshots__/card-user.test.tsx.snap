@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardUser renders correctly 1`] = `
+<div
+  aria-label="User card"
+  className="container-primary"
+>
+  <img
+    alt="Avatar of John Doe"
+    className="image-primary"
+    src="avatar.jpg"
+  />
+  <div>
+    <p
+      className="text b17-web gray-medium left"
+    >
+      Written By
+    </p>
+    <p
+      className="text b18-web black left"
+    >
+      John
+       
+      Doe
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CardUser renders correctly with isError 1`] = `
+<p
+  className="title text b18-web black left"
+>
+  Error! Failed to load user
+</p>
+`;
+
+exports[`CardUser renders correctly with isLoading 1`] = `
+<p
+  className="title text b18-web black left"
+>
+  Loading...
+</p>
+`;
+
+exports[`CardUser renders correctly with variant 1`] = `
+<div
+  aria-label="User card"
+  className="container-secondary"
+>
+  <img
+    alt="Avatar of John Doe"
+    className="image-secondary"
+    src="avatar.jpg"
+  />
+  <div>
+    <p
+      className="text b20-web gray-medium left"
+    >
+      Written By
+    </p>
+    <p
+      className="text b21-web black left"
+    >
+      John
+       
+      Doe
+    </p>
+  </div>
+</div>
+`;

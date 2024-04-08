@@ -5,7 +5,3 @@ export interface Comment {
     username: string
   }
 }
-
-export interface Comments {
-  comments: Comment[]
-}

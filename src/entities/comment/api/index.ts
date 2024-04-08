@@ -1,5 +1,5 @@
 import { apiClient } from "@/shared/api";
-import { Comments } from "../model";
+import { Comments } from "./types";
 
 const commentsApi = apiClient.injectEndpoints({
   endpoints: (build) => ({

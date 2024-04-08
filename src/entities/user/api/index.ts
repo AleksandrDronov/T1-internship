@@ -1,5 +1,5 @@
 import { apiClient } from "@/shared/api";
-import { User } from "../model";
+import { User } from "./types";
 
 const userApi = apiClient.injectEndpoints({
   endpoints: (build) => ({

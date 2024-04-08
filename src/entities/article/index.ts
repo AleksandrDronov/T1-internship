@@ -1,3 +1,2 @@
-export { CardArticle } from "./ui";
-export type { Article } from "./model";
+export type { Article } from "./api/types";
 export { useGetArticleQuery, useGetArticlesQuery } from "./api";
