@@ -3,11 +3,17 @@
   cursor: pointer;
   padding: 18px 30px;
   border-radius: 12px;
+  box-sizing: border-box;
   transition: var(--transition-common);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .primary {
@@ -16,14 +22,28 @@
   color: var(--colors-interface-white);
 }
 
-.primary:hover {
-  background-color: var(--colors-button-primary-hover);
-  color: var(--colors-interface-violet);
+@media (hover: hover) {
+  .primary:hover {
+    background-color: var(--colors-button-primary-hover);
+    color: var(--colors-interface-violet);
+  }
+
+  .primary:active {
+    background-color: var(--colors-button-primary-active);
+    color: var(--colors-interface-white);
+  }
+
+  .primary.disabled:hover {
+    background-color: var(--colors-button-primary-default);
+    color: var(--colors-interface-white);
+  }
 }
 
-.primary:active {
-  background-color: var(--colors-button-primary-active);
-  color: var(--colors-interface-white);
+@media (hover: none) {
+  .primary:active {
+    background-color: var(--colors-button-primary-hover);
+    color: var(--colors-interface-violet);
+  }
 }
 
 .secondary {
@@ -32,15 +52,30 @@
   color: var(--colors-interface-violet);
 }
 
-.secondary:hover {
-  background-color: var(--colors-button-secondary-hover);
-  color: var(--colors-interface-white);
+@media (hover: hover) {
+  .secondary:hover {
+    background-color: var(--colors-button-secondary-hover);
+    color: var(--colors-interface-white);
+  }
+  
+  .secondary:active {
+    background-color: var(--colors-button-secondary-active);
+    color: var(--colors-interface-violet);
+  }
+
+  .secondary.disabled:hover {
+    background-color: var(--colors-button-secondary-default);
+    color: var(--colors-interface-violet);
+  }
 }
 
-.secondary:active {
-  background-color: var(--colors-button-secondary-active);
-  color: var(--colors-interface-violet);
+@media (hover: none) {
+  .secondary:active {
+    background-color: var(--colors-button-secondary-hover);
+    color: var(--colors-interface-white);
+  }
 }
+
 
 .tertiary {
   padding: 0;

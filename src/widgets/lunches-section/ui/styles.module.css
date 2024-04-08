@@ -37,35 +37,3 @@
 .highlight {
   color: var(--colors-interface-violet);
 }
-
-.list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
-  gap: 50px 24px;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding-top: 87px;
-  padding-left: 0;
-}
-
-@media screen and (max-width: 1060px) {
-  .list {
-    justify-content: left;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .list {
-    padding-top: 60px;
-  }
-}
-
-.card {
-  transition: var(--transition-card);
-}
-
-.card:hover {
-  transform: translateY(-20px);
-}
-

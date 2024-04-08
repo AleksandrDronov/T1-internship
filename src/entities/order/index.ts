@@ -1,3 +1,3 @@
 export { CardOrder } from "./ui";
-export type { Order } from "./model";
+export type { Order } from "./ui/types";
 export { orders } from "./mocks";

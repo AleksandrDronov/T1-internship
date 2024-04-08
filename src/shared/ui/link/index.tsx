@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 interface CustomLinkProps extends LinkProps {
   className?: string;
   hasOpacity?: boolean;
-  children: string | JSX.Element;
+  children: string | JSX.Element | React.ReactNode;
 }
 export function CustomLink({
   children,

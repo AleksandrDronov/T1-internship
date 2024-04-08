@@ -1,3 +1,4 @@
 export { CardProduct } from "./ui";
-export type { Product } from "./model";
+export type { Recipe } from "./api/types";
 export { products } from "./mocks";
+export { useGetProductsQuery } from "./api";

@@ -1,0 +1,37 @@
+.section {
+  padding-top: 109px;
+  padding-bottom: 50px;
+  margin: 0 123px 0 133px;
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+  }
+}
+
+
+@media screen and (max-width: 1060px) {
+  .title {
+    text-align: left;
+  }
+}
+
+.highlight {
+  color: var(--colors-interface-violet);
+}

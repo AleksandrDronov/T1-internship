@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea default 1`] = `
+<textarea
+  className="textarea"
+/>
+`;
+
+exports[`Textarea placeholder 1`] = `
+<textarea
+  className="textarea"
+  placeholder="Placeholder"
+/>
+`;

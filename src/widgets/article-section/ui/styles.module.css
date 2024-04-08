@@ -1,0 +1,77 @@
+.section {
+  margin: 125px 96px 150px 96px;
+}
+
+@media screen and (max-width: 1060px) {
+  .section {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 60px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 98px;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
+}
+
+.button_content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button:hover svg path {
+  stroke: var(--colors-button-secondary-default);
+}
+
+.button:active svg path {
+  stroke: var(--colors-interface-violet);
+}
+
+.title {
+  padding-top: 220px;
+  padding-bottom: 220px;
+}

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Accordion renders correctly 1`] = `
+<ul
+  className="accordion"
+>
+  <li
+    className="item"
+  >
+    <button
+      aria-expanded={false}
+      aria-label="Close accordion section"
+      className="button button tertiary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="header"
+      >
+        <p
+          className="text b12-web black left"
+        >
+          Item 1
+        </p>
+        <img
+          alt=""
+          src=""
+        />
+      </div>
+      <p
+        className="content text b13-web black left"
+        style={
+          {
+            "height": 0,
+          }
+        }
+      >
+        <span
+          className="body"
+        >
+          Content 1
+        </span>
+      </p>
+    </button>
+  </li>
+  <li
+    className="item"
+  >
+    <button
+      aria-expanded={false}
+      aria-label="Close accordion section"
+      className="button button tertiary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="header"
+      >
+        <p
+          className="text b12-web black left"
+        >
+          Item 2
+        </p>
+        <img
+          alt=""
+          src=""
+        />
+      </div>
+      <p
+        className="content text b13-web black left"
+        style={
+          {
+            "height": 0,
+          }
+        }
+      >
+        <span
+          className="body"
+        >
+          Content 2
+        </span>
+      </p>
+    </button>
+  </li>
+</ul>
+`;

@@ -1,0 +1,30 @@
+.container-primary {
+  display: flex;
+  align-items: center;
+  gap: 16px
+}
+
+.image-primary {
+  width: 54px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.container-secondary {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.image-secondary {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title {
+  padding-top: 10px;
+  min-height: 37px;
+}

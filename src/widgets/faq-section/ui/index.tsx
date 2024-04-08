@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { Typography } from "@/shared/ui/typography";
 import { Accordion } from "@/shared/ui/accordion";
+import { useScrollTo } from "@/shared/hooks/useScrollTo";
 import image from "/vector-6.svg";
 import styles from "./styles.module.css";
 
@@ -31,8 +33,12 @@ const items = [
 ];
 
 export function FAQSection() {
+  const ref = useRef<null | HTMLElement>(null);
+
+  useScrollTo("faq", ref);
+
   return (
-    <section className={styles.section}>
+    <section className={styles.section} ref={ref}>
       <div className={styles.container}>
         <Typography
           className={styles.title}
