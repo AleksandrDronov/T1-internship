@@ -14,7 +14,7 @@ export function Slider({ children }: SliderProps) {
   const pagination = {
     clickable: true,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    renderBullet(_: any, className: string) {
+    renderBullet(_: number, className: string) {
       return `<span class="${className}"></span>`;
     },
   };

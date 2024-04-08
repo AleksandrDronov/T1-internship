@@ -1,5 +1,14 @@
 Проект выполненный во время обучения в открытой школе Т1 [JS+React](https://t1.ru/internship/item/otkrytaya-shkola-dlya-razrabotchikov-js-react/)
 
+[деплой](https://t1-internship-three.vercel.app/)
+
+### Используемые технологии и инструменты:
+1. React
+2. TypeScript
+3. Redux
+4. RTQ query
+5. FSD
+
 ### Запуск проекта:
 
 1. Клонировать репозиторий.
