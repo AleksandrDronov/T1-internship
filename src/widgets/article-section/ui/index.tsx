@@ -1,12 +1,19 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import {
+  AddComment,
+  useAppDispatch,
+  useAppSelector,
+  addCommentsStore,
+} from "@/features/add-comment";
 import { useGetArticleQuery } from "@/entities/article";
 import { CardUser, useGetUserQuery } from "@/entities/user";
 import { useGetCommentsForArticleQuery } from "@/entities/comment";
 import { Typography } from "@/shared/ui/typography";
 import { Button } from "@/shared/ui/button";
+import { CommentsList } from "./comments-list";
 import icon from "./star.svg";
 import styles from "./styles.module.css";
-import { CommentsList } from "./comments-list";
 
 export function ArticleSection() {
   const { id } = useParams();
@@ -24,7 +31,15 @@ export function ArticleSection() {
     data: commentData,
     isLoading: isCommentsLoading,
     isError: isCommentsError,
-  } = useGetCommentsForArticleQuery(id, { skip: !articleData });
+  } = useGetCommentsForArticleQuery(id, { skip: !articleData?.id });
+  const { comments } = useAppSelector((state) => state.comments);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (commentData) {
+      dispatch(addCommentsStore(commentData.comments));
+    }
+  }, [commentData, dispatch]);
 
   if (isArticleLoading) {
     return (
@@ -37,7 +52,15 @@ export function ArticleSection() {
   if (isArticleError) {
     return (
       <Typography className={styles.title} variant="h3-web" align="center">
-        An error has occurred!
+        Error! Failed to load article
+      </Typography>
+    );
+  }
+
+  if (!articleData?.id) {
+    return (
+      <Typography className={styles.title} variant="h3-web" align="center">
+        Article not found
       </Typography>
     );
   }
@@ -45,7 +68,7 @@ export function ArticleSection() {
   return (
     <section className={styles.section}>
       <Typography variant="h5-web" tag="h1">
-        {articleData?.title}
+        {articleData.title}
       </Typography>
       <div className={styles.header}>
         <CardUser
@@ -58,16 +81,16 @@ export function ArticleSection() {
         <div>
           <div className={styles.icon_container}>
             <Typography variant="b9-web" color="gray-medium">
-              {articleData?.reactions}
+              {articleData.reactions}
             </Typography>
             <img src={icon} alt="" />
           </div>
           <Typography variant="b17-web" color="gray-medium" align="right">
-            {articleData?.tags.map((tag) => `#${tag}`).join(", ")}
+            {articleData.tags.map((tag) => `#${tag}`).join(", ")}
           </Typography>
         </div>
       </div>
-      <Typography variant="b19-web">{articleData?.body}</Typography>
+      <Typography variant="b19-web">{articleData.body}</Typography>
       <Button className={styles.button} variant="secondary" isLink to="/blog">
         <div className={styles.button_content}>
           <svg
@@ -96,10 +119,11 @@ export function ArticleSection() {
         </div>
       </Button>
       <CommentsList
-        comments={commentData?.comments}
+        comments={comments}
         isLoading={isCommentsLoading}
         isError={isCommentsError}
       />
+      <AddComment postId={articleData.id} />
     </section>
   );
 }

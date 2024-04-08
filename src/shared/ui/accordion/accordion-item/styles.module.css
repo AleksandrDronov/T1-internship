@@ -1,27 +1,27 @@
-.accordion_item {
+.item {
   padding: 20px 0;
 }
 
-.accordion_button {
+.button {
   width: 100%;
 }
 
-.accordion_header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.accordion_content {
+.content {
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.accordion_body {
+.body {
   display: block;
 }
 
-.accordion_open {
+.open {
   padding-top: 17px;
   padding-bottom: 20px;
 }

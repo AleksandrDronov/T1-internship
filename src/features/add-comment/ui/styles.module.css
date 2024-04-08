@@ -1,0 +1,23 @@
+.container {
+  margin-top: 100px;
+}
+
+.highlight {
+  color: var(--colors-interface-violet);
+}
+
+.textarea {
+  height: 345px;
+  margin-top: 50px;
+}
+
+.button {
+  margin-top: 50px;
+  width: 367px;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
+}

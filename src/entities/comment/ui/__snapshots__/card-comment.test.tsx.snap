@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardComment renders correctly 1`] = `
+<div
+  aria-label="Comment card"
+  className="container"
+>
+  <div
+    className="header"
+  >
+    <p
+      className="text b10-web black left"
+    >
+      @
+      omottley2h
+    </p>
+    <img
+      alt=""
+      className="icon"
+      src=""
+    />
+  </div>
+  <p
+    className="text b11-web gray left"
+  >
+    I cannot believe how I found you, this is so pretty.
+  </p>
+</div>
+`;
+
+exports[`CardComment renders correctly with className 1`] = `
+<div
+  aria-label="Comment card"
+  className="test container"
+>
+  <div
+    className="header"
+  >
+    <p
+      className="text b10-web black left"
+    >
+      @
+      omottley2h
+    </p>
+    <img
+      alt=""
+      className="icon"
+      src=""
+    />
+  </div>
+  <p
+    className="text b11-web gray left"
+  >
+    I cannot believe how I found you, this is so pretty.
+  </p>
+</div>
+`;

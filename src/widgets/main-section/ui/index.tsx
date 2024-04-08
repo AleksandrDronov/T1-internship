@@ -1,5 +1,6 @@
 import graphImage from "/graph.svg";
-import foodImage from "/food.svg";
+import foodImageSvg from "/food.png";
+import foodImageWebp from "/food.webp";
 import arrowImage from "/arrow.svg";
 import linesImage1 from "/lines-1.svg";
 import linesImage2 from "/lines-2.svg";
@@ -15,13 +16,15 @@ export function MainSection() {
     <section className={styles.section}>
       <MainBlock />
       <div className={styles.container}>
-        <img
-          className={styles.plate}
-          src={foodImage}
-          loading="lazy"
-          alt="Plate with vegetables and fish"
-        />
-        <img className={styles.graph} loading="lazy" src={graphImage} alt="" />
+        <picture>
+          <source srcSet={foodImageWebp} type="image/webp" />
+          <img
+            className={styles.plate}
+            src={foodImageSvg}
+            alt="Plate with vegetables and fish"
+          />
+        </picture>
+        <img className={styles.graph} src={graphImage} alt="" />
         <img className={styles.arrow} src={arrowImage} alt="" />
         <img className={styles.lines_lower} src={linesImage2} alt="" />
         <div className={styles.card_container}>

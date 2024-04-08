@@ -1,10 +1,10 @@
-import { Slider } from "@/shared/ui/slider";
 import { CardComment, useGetCommentsQuery } from "@/entities/comment";
 import { Typography } from "@/shared/ui/typography";
+import { Slider } from "@/shared/ui/slider";
 import styles from "./styles.module.css";
 
 export function CommentsList() {
-  const { data = { comments: [] }, isLoading, isError } = useGetCommentsQuery();
+  const { data, isLoading, isError } = useGetCommentsQuery();
 
   if (isLoading) {
     return (
@@ -13,10 +13,19 @@ export function CommentsList() {
       </Typography>
     );
   }
+
   if (isError) {
     return (
       <Typography className={styles.title} variant="h3-web" align="center">
-        An error has occurred!
+        Error! Failed to load comments
+      </Typography>
+    );
+  }
+
+  if (!data?.comments?.length) {
+    return (
+      <Typography className={styles.title} variant="h3-web" align="center">
+        No comments
       </Typography>
     );
   }

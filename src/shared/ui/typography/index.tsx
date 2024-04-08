@@ -31,6 +31,8 @@ interface TypographyProps {
     | "b17-web"
     | "b18-web"
     | "b19-web"
+    | "b20-web"
+    | "b21-web";
   color?:
     | "black"
     | "white"

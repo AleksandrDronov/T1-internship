@@ -20,7 +20,14 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.ts", "public"],
+  ignorePatterns: [
+    "dist",
+    ".eslintrc.cjs",
+    "vite.config.ts",
+    "public",
+    "jest.config.cjs",
+    "/src/app/jest-config",
+  ],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
   parserOptions: {
@@ -43,5 +50,18 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/no-absolute-path": "off",
     "react/button-has-type": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: [
+          "test.{ts,tsx}", // repos with a single test file
+          "test-*.{ts,tsx}", // repos with multiple top-level test files
+          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
+          "**/jest.config.ts", // jest config
+          "**/jest.setup.ts", // jest setup
+        ],
+        optionalDependencies: false,
+      },
+    ],
   },
 };

@@ -40,6 +40,7 @@ export function Button({
         [styles.disabled]: disabled,
       })}
       type={type}
+      disabled={disabled}
       {...props}
     >
       {children}

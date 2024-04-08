@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  min-height: 270px;
   max-width: 350px;
   padding: 26px 20px;
   border-radius: 16px;
@@ -14,17 +15,25 @@
   }
 }
 
+.skeleton {
+  animation: skeleton-loading 1.2s linear infinite alternate;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 18px;
+  padding-top: 18px;
+  padding-bottom: 10px;
 }
 
-.icon_container {
+.icon {
   display: flex;
   align-items: center;
+}
+
+.tags {
+  padding-bottom: 18px;
 }
 
 .body {
@@ -33,4 +42,15 @@
   font-size: 18px;
   line-height: 26px; 
   color: #081420;
+}
+
+@keyframes skeleton-loading {
+  0% {
+     background-color: var(--colors-interface-white);
+  }
+
+  100% {
+     background-color: var(--colors-interface-violet-light);
+     opacity: 0.1;
+  }
 }
