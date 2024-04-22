@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { useRef } from "react";
 import { AccordionItemType } from "./types";
 import { Button } from "../../button";
@@ -33,15 +32,16 @@ export function AccordionItem({ item, isOpen, onClick }: AccordionItemProps) {
           )}
         </div>
         <Typography
-          className={clsx(styles.content, {
-            [styles.open]: isOpen,
-          })}
+          className={styles.content}
           inlineStyles={{
             height: isOpen ? itemRef.current?.scrollHeight : 0,
           }}
           variant="b13-web"
         >
-          <span className={styles.body} ref={itemRef}>
+          <span
+            className={styles.body}
+            ref={itemRef}
+          >
             {item.content}
           </span>
         </Typography>

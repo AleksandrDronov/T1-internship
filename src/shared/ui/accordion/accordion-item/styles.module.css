@@ -14,14 +14,11 @@
 
 .content {
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: height 0.3s linear;
 }
 
 .body {
   display: block;
-}
-
-.open {
   padding-top: 17px;
   padding-bottom: 20px;
 }

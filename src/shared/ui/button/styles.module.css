@@ -1,14 +1,14 @@
 .button {
-  height: 100%;
-  cursor: pointer;
-  padding: 18px 30px;
-  border-radius: 12px;
   box-sizing: border-box;
-  transition: var(--transition-common);
+  height: 100%;
+  border-radius: 12px;
+  padding: 18px 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  transition: var(--transition-common);
+  cursor: pointer;
 }
 
 .disabled {
@@ -17,69 +17,69 @@
 }
 
 .primary {
-  background-color: var(--colors-button-primary-default);
   border: 1px solid var(--colors-button-primary-default);
   color: var(--colors-interface-white);
+  background-color: var(--colors-button-primary-default);
 }
 
 @media (hover: hover) {
   .primary:hover {
-    background-color: var(--colors-button-primary-hover);
     color: var(--colors-interface-violet);
+    background-color: var(--colors-button-primary-hover);
   }
 
   .primary:active {
-    background-color: var(--colors-button-primary-active);
     color: var(--colors-interface-white);
+    background-color: var(--colors-button-primary-active);
   }
 
   .primary.disabled:hover {
-    background-color: var(--colors-button-primary-default);
     color: var(--colors-interface-white);
+    background-color: var(--colors-button-primary-default);
   }
 }
 
 @media (hover: none) {
   .primary:active {
-    background-color: var(--colors-button-primary-hover);
     color: var(--colors-interface-violet);
+    background-color: var(--colors-button-primary-hover);
   }
 }
 
 .secondary {
-  background-color: var(--colors-button-secondary-default);
   border: 1px solid var(--colors-button-primary-default);
   color: var(--colors-interface-violet);
+  background-color: var(--colors-button-secondary-default);
 }
 
 @media (hover: hover) {
   .secondary:hover {
-    background-color: var(--colors-button-secondary-hover);
     color: var(--colors-interface-white);
+    background-color: var(--colors-button-secondary-hover);
   }
   
   .secondary:active {
-    background-color: var(--colors-button-secondary-active);
     color: var(--colors-interface-violet);
+    background-color: var(--colors-button-secondary-active);
   }
 
   .secondary.disabled:hover {
-    background-color: var(--colors-button-secondary-default);
     color: var(--colors-interface-violet);
+    background-color: var(--colors-button-secondary-default);
   }
 }
 
 @media (hover: none) {
   .secondary:active {
-    background-color: var(--colors-button-secondary-hover);
     color: var(--colors-interface-white);
+    background-color: var(--colors-button-secondary-hover);
   }
 }
 
 
 .tertiary {
-  padding: 0;
   height: auto;
   border: none;
+  padding: 0;
   background-color: transparent;
 }

@@ -11,9 +11,9 @@
 }
 
 .logo-footer {
-  composes: logo-header;
   font-size: 28px;
   line-height: 37px;
+  composes: logo-header;
 }
 
 .b1-web {
@@ -32,8 +32,8 @@
 }
 
 .b3-web {
-  composes: b1-web;
   font-weight: 400;
+  composes: b1-web;
 }
 
 .b4-web {
@@ -44,9 +44,9 @@
 }
 
 .b5-web {
-  composes: b1-web;
   font-size: 14px;
   line-height: 22px;
+  composes: b1-web;
 }
 
 .b6-web {
@@ -57,12 +57,12 @@
 }
 
 .b7-web {
-  composes: b2-web;
   font-size: clamp(1.125rem, 0.9821rem + 0.7143vw, 1.625rem);
   line-height: 1.61;
   /* font-size: 26px; */
   /* line-height: 42px; */
   letter-spacing: normal;
+  composes: b2-web;
 }
 
 .b8-web {
@@ -84,8 +84,8 @@
 .b10-web {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  line-height: 1.6;
   font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  line-height: 1.6;
   /* font-size: 20px; */
   /* line-height: 32px; */
 }
@@ -93,8 +93,8 @@
 .b11-web {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: italic;
   font-size: 18px;
+  font-style: italic;
   line-height: 26px;
 }
 
@@ -140,9 +140,9 @@
 }
 
 .b14-web {
-  composes: b1-web;
   font-size: 16px;
   line-height: 25px;
+  composes: b1-web;
 }
 
 .b15-web {
@@ -160,32 +160,32 @@
 }
 
 .b17-web {
-  composes: b16-web;
   font-size: 16px;
+  composes: b16-web;
 }
 
 .b18-web {
-  composes: b10-web;
   font-size: 18px;
   line-height: 26px;
+  composes: b10-web;
 }
 
 .b19-web {
-  composes: b16-web;
   font-size: 22px;
   line-height: 45px;
+  composes: b16-web;
 }
 
 .b20-web {
-  composes: b16-web;
   font-size: 14px;
   line-height: 21px;
+  composes: b16-web;
 }
 
 .b21-web {
-  composes: b10-web;
   font-size: 16px;
   line-height: 26px;
+  composes: b10-web;
 }
 
 
@@ -230,12 +230,12 @@
 }
 
 .h4-web {
-  composes: h1-web;
   font-size: clamp(1.5rem, 1.125rem + 1.875vw, 2.8125rem);
   line-height: 0.57;
   /* font-size: 45px; */
   /* line-height: 26px; */
   letter-spacing: normal;
+  composes: h1-web;
 }
 
 .h5-web {
