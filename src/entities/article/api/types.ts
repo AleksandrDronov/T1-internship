@@ -4,7 +4,10 @@ export interface Article {
   body: string;
   userId: number;
   tags: string[];
-  reactions: number;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
 }
 
 export interface Articles {

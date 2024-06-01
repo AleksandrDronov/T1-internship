@@ -46,7 +46,7 @@ export function CardArticle({
             />
             <div className={styles.icon}>
               <Typography variant="b9-web" color="gray-medium">
-                {article.reactions}
+                {article.reactions.likes}
               </Typography>
               <img src={icon} alt="" />
             </div>
