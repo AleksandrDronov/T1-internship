@@ -81,7 +81,7 @@ export function ArticleSection() {
         <div>
           <div className={styles.icon_container}>
             <Typography variant="b9-web" color="gray-medium">
-              {articleData.reactions}
+              {articleData.reactions.likes}
             </Typography>
             <img src={icon} alt="" />
           </div>
